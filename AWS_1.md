@@ -17,6 +17,7 @@ By adopting DevOps practices, organizations can achieve faster software releases
 DevOps is often associated with the use of various tools and technologies, such as version control systems (e.g., Git), configuration management tools (e.g., Ansible, Chef, Puppet), containerization (e.g., Docker, Kubernetes), cloud computing platforms (e.g., Microsoft Azure, Amazon Web Services), and monitoring and analytics tools (e.g., Prometheus, ELK stack).
 
 # Sharuks Article
+```
 
 ```
 ### what is AWS?
@@ -55,22 +56,26 @@ Launch templates
 setup alarms - monitor and notifications 
 s3 buckets - like blob storage, cli interface and python 
 ```
-# Advances topics # 
+### Advances topics # 
+```
 autoscaling groups 
 Virtual Private Clouds VPCs - reinforced security
 Deployment of application and scripts 
-
+```
 ### T1 - Differnces between AWS and Azure 
 
-  `resource groups` - in azure everything must go in a resource group, in AWS nothing is needed to go in a resource group.
+`resource groups` - in azure everything must go in a resource group, in AWS nothing is needed to go in a resource group.
 
 `IP addresses` - azure defualt uses static - same ip
 in aws - uses dynamic - changes everytime you restart your vm
 
-`Terminology differences`
+`Terminology differences` 
+- Launce vs create VM on AWS
+
 
 ### Launching our First EC2 instances 
-- security of AWS, NOT to lead credentials 
+
+`**security of AWS, NOT to lead credentials**` 
 
 security measures  
 keypass - software 
@@ -154,9 +159,9 @@ search for your VM on instances through filtering your name.
 `click instance state and terminate instance` - Note you can terminate your VM without stopping and do not to delete additonal resource groups etc like in azure
 
 # Task 1.2: Automation L3.5 - Setup Sparta test app (with working posts page) on AWS using scripts (from Azure)
-
+```
 create the database VM - use tech241-<yourname>-db-sg-SSH-mongo (or similar) for your security group name.
-
+```
 `remember to add inbound port 27017`
 
 `create a script provision file using command touch`
@@ -164,10 +169,26 @@ create the database VM - use tech241-<yourname>-db-sg-SSH-mongo (or similar) for
 `nano into your provisions.sh file and add script`
 
 `use chmod u+x provision.sh to give user execute permissions`
-
+```
+run your database script
+```
 `run script`
+```
+check the database script did it's job
+```
+```
+create the app VM
+```
+`on the vm script make sure to change your IP address to your db vm each time as AWS has dynamic IP`
+```
+run your app script (with working reverse proxy) add command 
+```
+`sudo sed -i 's#try_files $uri $uri/ =404;#proxy_pass http://localhost:3000;#g' /etc/nginx/sites-available/defaul`
 
-
+`sudo systemctl restart nginx`
+```
+check the app script did it's job
+```
 
 
 
