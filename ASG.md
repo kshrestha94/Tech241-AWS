@@ -1,4 +1,4 @@
-## Autoscaling groups ##
+## Autoscaling groups MVP ##
 
 1. when you have a app VM that has too high load it will crash 
 
@@ -45,17 +45,61 @@ internet facing traffic coming in -> load balancer -> specify availability zones
 
 ASG
 1. database VM running 
+```
+original database virtual machine needs to be running 
+```
 2. create new app vm using provision script 
+```
+New VM with provision script input in user detail. Ensure working script and input db public IP address
+```
 3. ami
+```
+create new ami for the new vm
+```
+
 4. launch template using that ami
+
+```
+create launch template and input script to only start application 
+```
+```
+#!/bin/bash
+
+#getting inside app folder
+cd repo/app
+
+#Creating DB_HOST env variable
+export DB_HOST=mongodb://172.31.38.156:27017/posts
+
+# installing the app
+npm install
+
+# populates database in case there are no posts
+node seeds/seed.js
+
+# kills previous background processes
+pm2 kill
+
+# starting the app
+pm2 start app.js
+
+
+
+```
 5. tested launch template 
 6. create ASG
 7. load balance and test DNS
 
 
+# supporting images 
 
 ![Alt text](autoscaling.png)
 
 
 ![Alt text](autoscaling_2.png)
 
+# todo list 
+
+- insert screnshots of the processes of creating ASG and load balace
+- information on each step 
+- 
