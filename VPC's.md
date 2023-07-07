@@ -194,12 +194,3 @@ A VPC helps DevOps by providing a dedicated network environment for deploying an
 AWS introduced VPCs to provide customers with a secure and isolated network environment in the cloud, allowing them to have granular control over their resources, establish private networks, ensure data privacy, and seamlessly integrate their cloud infrastructure with their existing on-premises infrastructure.
 
 
-
-
-
-include a diagram in your doc
-
-Public + private subnets
-
-Route table/s
-How security groups work on instance level
