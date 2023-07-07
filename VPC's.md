@@ -66,7 +66,7 @@ if it starts with 10. it is private
 
 CIDR block private subnet 10.0.3.1-255/24
 
-![Alt text](/images/VPC%20Image.png)
+![Alt text](<VPC Image.png>)
 
 # CODE ALONG
 ### Creating a VPC STEP1
@@ -122,7 +122,7 @@ CIDR block 10.0.2.0/24
 5. save
 
 ## Resource Map
-![Alt text](/images/resource%20map.png)
+![Alt text](<resource map.png>)
 
 # step 8 creating your VMS
 
