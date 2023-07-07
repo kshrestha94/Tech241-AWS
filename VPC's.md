@@ -1,7 +1,7 @@
 ```
 AMI copy of disk and faster time to load. More efficent 
 ```
-`A Virtual Private Cloud (VPC)` 
+# A Virtual Private Cloud (VPC) 
 ```
 is a virtual network infrastructure in the cloud that allows you to securely isolate and control your resources, providing a private and customizable network environment.
 ```
