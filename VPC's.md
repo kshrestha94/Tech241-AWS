@@ -100,7 +100,7 @@ CIDR block 10.0.2.0/24
 - CIDR block: 10.0.3.0/24
 5.create subnet tab
 
-# Route tables - to allow access from outside STEP5
+### Route tables - to allow access from outside STEP5
 
 1.route tables 
 2.create routetable 
@@ -108,13 +108,13 @@ CIDR block 10.0.2.0/24
 4.VPC select yours 
 5.create route table tab
 
-# STEP 6
+### STEP 6
 6. subnet assocaition tab
 7. edit subnet assoc on explicit subnet association
 8. public subnet select 
 9. save accociations
 
-# STEP 7
+### STEP 7
 1. routes 
 2. add route
 3. edit IG 0.0.0.0/0 
@@ -124,7 +124,7 @@ CIDR block 10.0.2.0/24
 ## Resource Map
 ![Alt text](<resource map.png>)
 
-# step 8 creating your VMS
+### step 8 creating your VMS
 
 
 ## First create db vm
